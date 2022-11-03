@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+     
+    }
+    body{
+      background-color:  hsl(30, 38%, 92%); 
+     
+      height: 100vh;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    div.container{
+      
+      display: grid;
+    height: 450px;
+      width: 600px;
+      grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    margin: auto;
+      background-color:  hsl(0, 0%, 100%);
+    }
+    div .img{
+   width: 300px;
+    display: grid;
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+    .content{
+      text-align: left;
+    }
+    .content h2{
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: 13px;
+     padding-left: 30px;
+     padding-bottom: 20px;
+     padding-top: 30px;
+     
+     font-family: 'Montserrat', sans-serif;
+  
+     font-weight: 500;
+     color:  hsl(228, 12%, 48%);
+    }
+    .content h1{
+      padding-right: 20px;
+      padding-left: 30px;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      color: hsl(212, 21%, 14%);
+    }
+    .content h1 span{
+      color:  hsl(158, 36%, 37%);
+    }
+    .content p{
+      padding: 20px;
+      padding-left: 30px;
+      font-size:14px ;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 25px;
+      font-weight: 700;
+      padding-right: 35px;
+      
+      color:  hsl(228, 12%, 48%);
+    }
+    .content h5{
+      padding: 0;
+      text-align: right;
+      padding-right: 65px;
+      margin-top: -30px;
+      font-family: 'Montserrat', sans-serif;
+      opacity: 50%;
+      text-decoration: line-through;
+    }
+    button{
+      color:  hsl(0, 0%, 100%);
+      width: 230px;
+     font-size: 14px;
+     text-align: center ;
+      margin-left: 30px;
+      height: 45px;
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color:  hsl(158, 36%, 37%);
+      border-width: 0px;
+      display: flex;
+    }
+    button:hover{
+      background-color:  hsl(158, 36%, 20%);
+    }
+  
+    .material-symbols-outlined { font-size: 19px;padding-top: 15px; padding-right: 10px; padding-left: 60px; }
+
+button span{
+  padding-top: 15px;
+}
+@media (max-width:375px){
+  div.container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.5fr;
+      width: 360px;
+      height:630px ;
+      margin-top: 20px;
+      
+     
+  }
+  
+  .content{
+      text-align: left;
+      display: inline-block;
+  }
+  div .img{
+  width: 360px;
+  border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    background-image: url("images/image-product-mobile.jpg");
+    background-size: cover;
+  
+    }
+    .content h2{
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: 13px;
+     padding-left: 25px;
+     padding-bottom: 10px;
+     padding-top: 20px;
+     
+  
+     font-weight: 500;
+     color:  hsl(228, 12%, 48%);
+    }
+  .content p{
+    padding-top:10px;
+  }
+  .content h5{
+      padding: 0;
+      text-align: right;
+      padding-right: 130px;
+      margin-top: -25px;
+  }
+  button{
+     
+      width: 300px;
+      height: 50px;
+  }
+  .material-symbols-outlined { font-size: 19px;padding-top: 15px; padding-right: 10px; padding-left: 95px; }
+
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="img"></div>
+    <div class="content">
+      <h2>perfume</h2>
+      <h1>Gabrielle Esssence Eau De Parfum</h1>
+      <p>A floral solar and voluptuous interpretation composed by Oliver Polge,Perfumer-Cretor  for the House of CHANEL</p>
+      <h1><span>$149.99</span></h1> <h5>$169.99</h5>
+      <button >
+        <i class="material-symbols-outlined">
+
+            shopping_cart
+        </i><span>Add to Cart</span> </button>
+    </div>
+  </div>
+
+</body>
+</html>
